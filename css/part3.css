@@ -1,0 +1,118 @@
+/*index part3*/
+div .text:before {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	content: '';
+	font-size: 20px;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	background-color: linear-gradient;
+}
+
+/*float css*/
+
+.container2 {
+	height: 550px;
+	margin: 100px auto;
+	position: relative;
+	width: 1100 px;
+	display: flex;
+	flex-wrap: wrap;
+	left: 24%;
+	/*left居中*/
+}
+
+.container2 .box {
+	top: 40%;
+	position: relative;
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	transition: 0.5s;
+}
+
+.container2 .box:hover {
+	z-index: 1;
+	transform: scale(1.25);
+	box-shadow: 0 25px 40px rgba(0, 0, 0, .5);
+	/*每个logo边框hover的时候阴影效果*/
+}
+
+.container2 .box .imgbx {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.container2 .box .imgbx:before {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: gray;
+	z-index: 1;
+	mix-blend-mode: multiply;
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.container2 .box:hover .imgbx:before {
+	opacity: 1;
+}
+
+.container2 .box .imgbx img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.container2 .box .cont {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	display: flex;
+	padding: 20px;
+	align-items: flex-end;
+}
+
+.container2 .box .cont h2 {
+	/*color: black;*/
+	color: mediumblue;
+	transition: 0.5s;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+	font-size: 20px;
+	transform: translateY(200px);
+}
+
+.container2 .box:hover .cont h2 {
+	transform: translateY(0px);
+	transition-delay: 0.6px;
+}
+
+.container2 .box .cont p {
+	/*color: black;*/
+	color: mediumblue;
+	transform: translateY(200px);
+	transition: 0.5s;
+	font-size: 14px;
+}
+
+.container2 .box:hover .cont p {
+	transform: translateY(0px);
+	transition-delay: 0.7px;
+}
